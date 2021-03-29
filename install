@@ -1,0 +1,8 @@
+echo 'Installation'
+python3 -m venv venv
+. ./venv/bin/activate
+pip3 install -r requirements.txt
+cd ci 
+./manage.py migrate
+cd ../target
+./manage.py migrate
